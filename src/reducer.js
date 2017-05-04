@@ -38,6 +38,8 @@ function todos (state = [], action) {
 }
 
 function todoApp (state = {}, action) {
+  console.debug('Incoming state -> ', state)
+  console.debug('Incoming action -> ', action)
   return {
     visibilityFilter: visibilityFilter(state.visibilityFilter, action),
     todos: todos(state.todos, action)

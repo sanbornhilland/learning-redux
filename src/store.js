@@ -4,10 +4,10 @@ import todoApp from './reducer.js'
 
 const store = createStore(todoApp)
 
-console.log(store.getState())
+console.debug('Initial State -> ', store.getState())
 
 let unsubscribe = store.subscribe(() => {
-  console.log(store.getState())
+  console.debug('State change ->', store.getState())
 })
 
 store.dispatch(addTodo('Learn about actions'))
